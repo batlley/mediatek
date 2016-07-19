@@ -1,0 +1,32 @@
+<#import "../layout/defaultLayout.ftl.html" as layout> 
+<@layout.myLayout "Shopping Cart">    
+
+<div class="container">
+  <div class="row">
+
+    <h1>Shopping Cart</h1>
+
+    <table class="table table-striped table-hover">
+     <tr>
+      <th>Item</th>
+      <th>Qty</th>
+    </tr>
+    <#if productsQtyGroupedByProductName??>
+     <#list productsQtyGroupedByProductName?keys as key>
+      <tr>
+      <th>${key}</th>
+      <th>${productsQtyGroupedByProductName[key]} </th>
+      </tr>
+     </#list>
+    <#else>
+    <tr>
+      <th><i>Empty</i></th>
+      <th></th>
+    </tr>
+    </#if>
+  </table>
+  
+</div>
+</div>
+
+</@layout.myLayout>

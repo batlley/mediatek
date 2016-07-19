@@ -1,0 +1,51 @@
+<#macro myLayout title="Layout">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/assets/webjars/jquery/1.9.0/jquery.js"></script>
+    <meta charset="utf-8">
+    <title>${title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/assets/webjars/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/webjars/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <div class="container">
+        
+        <#include "header.ftl.html"/>
+        
+        <#if (flash.error)??>
+            <div class="alert alert-danger">
+                ${flash.error}
+            </div>
+        </#if>
+        
+        <#if (flash.success)??>
+            <div class="alert alert-success">
+                ${flash.success}
+            </div>
+        </#if>
+
+        <#nested/>
+
+        <#include "footer.ftl.html"/>
+        
+    </div>
+    <script type="text/javascript" src="/assets/webjars/tinymce-jquery/3.4.9/jscripts/tiny_mce/tiny_mce.js" ></script>
+    <script src="/assets/webjars/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+</#macro>

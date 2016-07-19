@@ -1,0 +1,24 @@
+<#import "../layout/defaultLayout.ftl.html" as layout> 
+<@layout.myLayout "Mediatek - Products">    
+
+<div class="container">
+  <div class="row">
+    <h1>Products</h1>
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th></th>
+      </tr>
+      <#list products as product>
+      <tr>
+        <td>${product.id}</td>
+        <td><a href="/products/${product.id}">${product.name}</td>
+        <td><a class="addProductToCart" ajax-href="/shopping_cart/addProduct.json?product_id=${product.id}" href="#">Add</a></td>
+      </tr>
+      </#list>
+    </table>
+  </div>
+</div>
+<script type="text/javascript" src="/assets/productController.js"></script>
+</@layout.myLayout>
