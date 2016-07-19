@@ -34,6 +34,6 @@ A simple web app designed with [Ninja framework](www.ninjaframework.org) to disp
 
 ## Information
 
-- MVC architecture using Ninja framework, HTML page are rendered using Freemarker.
+- MVC architecture using Ninja framework. HTML pages are rendered using Freemarker.
 - All routes are located in `java/conf/Routes.java`
 - An AJAX call is done in `assets/productController.js` to add a product in the shopping cart.
