@@ -28,6 +28,6 @@ A simple web app designed with [Ninja framework](www.ninjaframework.org) to disp
 
 0. `git clone`
 1. `cd <root-to-project>`
-2. Compile the project: `mvn:compile`
+2. Compile the project: `mvn compile`
 3. Run the project: `mvn ninja:run`
 4. Access with your browser: `http://localhost:8080/`
