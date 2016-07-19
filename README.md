@@ -31,3 +31,9 @@ A simple web app designed with [Ninja framework](www.ninjaframework.org) to disp
 2. Compile the project: `mvn compile`
 3. Run the project: `mvn ninja:run`
 4. Access with your browser: `http://localhost:8080/`
+
+## Information
+
+- MVC architecture using Ninja framework, HTML page are rendered using Freemarker.
+- All routes are located in `java/conf/Routes.java`
+- An AJAX call is done in `assets/productController.js` to add a product in the shopping cart.
